@@ -1,4 +1,4 @@
-# Hacker News Improved
+# Improved Hacker News
 
 I thought [Hacker News](https://news.ycombinator.com) would be a little better with just a few extra features. [Install from userscripts.org](http://userscripts.org/scripts/show/185992)
 
