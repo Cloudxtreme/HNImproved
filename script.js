@@ -50,8 +50,10 @@ window.addEventListener('load', function() {
                 loadProfileMods();
             }
             break;
+        case "/item":
+            loadItemMods();
+            break;
     }
-    
     var s = document.createElement('style');
     s.innerHTML = pageStyle;
     document.getElementsByTagName('head')[0].appendChild(s);
@@ -103,6 +105,12 @@ function searchKeyDown(e) {
 function createSearchString(terms) {
     return 'https://www.hnsearch.com/search#request/all&q=' +
         escape(terms) + '&start=0';
+}
+
+function loadItemMods() {
+    var author = document.querySelector('.subtext a[href^="user"]').textContent;
+    pageStyle += 'a[href^="user?id=' + author + '"] { color: red !important; }';
+    pageStyle += 'a[href^="user?id=' + author + '"]:after { color: grey; content: " [op]"; }';
 }
 
 function loadListingMods() {
